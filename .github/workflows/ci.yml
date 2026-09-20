@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install MSYS2
+        uses: msys2/setup-msys2@v2
+        with:
+          update: true
+          install: >-
+            mingw-w64-x86_64-gcc
+            mingw-w64-x86_64-cmake
+            mingw-w64-x86_64-ninja
+            mingw-w64-x86_64-nlohmann-json
+            mingw-w64-x86_64-gtest
+
+      - name: Configure
+        shell: msys2 {0}
+        run: |
+          cmake -G "MinGW Makefiles" -B build -DCMAKE_BUILD_TYPE=Release
+
+      - name: Build
+        shell: msys2 {0}
+        run: |
+          cmake --build build
+
+      - name: Test
+        shell: msys2 {0}
+        run: |
+          cd build && ctest --output-on-failure
