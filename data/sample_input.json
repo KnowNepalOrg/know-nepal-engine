@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Kathmandu",
+    "nameNepali": "\u0915\u093E\u0936\u094D\u092E\u093E\u0901\u0921\u0941",
+    "module": "geography",
+    "type": "municipality",
+    "href": "/geography/municipalities/kathmandu-26",
+    "aliases": ["Kathmandu city", "Kathmandu municipality"],
+    "keywords": ["city", "municipality", "urban", "metro"],
+    "location": "Kathmandu",
+    "popularity": 75,
+    "meta": { "districtId": 26, "provinceId": 3 }
+  },
+  {
+    "name": "Chitwan National Park",
+    "module": "wildlife",
+    "type": "national-park",
+    "href": "/wildlife/parks/chitwan-national-park",
+    "aliases": ["Chitwan"],
+    "keywords": ["rhino", "tiger", "safari", "jungle", "unesco"],
+    "popularity": 70,
+    "meta": { "districtId": 32 }
+  },
+  {
+    "name": "Dashain",
+    "module": "culture",
+    "type": "festival",
+    "href": "/culture/festivals/dashain",
+    "aliases": ["Dasain", "Bada Dashain", "Vijaya Dashami"],
+    "keywords": ["festival", "holiday", "tika", "national"],
+    "popularity": 65,
+    "meta": {}
+  },
+  {
+    "id": "custom-everest",
+    "name": "Everest Base Camp",
+    "module": "destinations",
+    "type": "destination",
+    "href": "/destinations/everest-base-camp",
+    "aliases": ["EBC"],
+    "keywords": ["trek", "everest", "himalaya"],
+    "popularity": 70,
+    "meta": { "provinceId": 3 }
+  },
+  {
+    "name": "Tribhuvan University",
+    "module": "education",
+    "type": "university",
+    "href": "/education/universities/tribhuvan-university",
+    "aliases": ["TU"],
+    "keywords": ["university", "education"],
+    "popularity": 60,
+    "meta": { "capital": "Kirtipur" }
+  },
+  {
+    "name": "Bir Hospital",
+    "module": "healthcare",
+    "type": "hospital",
+    "href": "/healthcare/hospitals/bir-hospital",
+    "aliases": [],
+    "keywords": [],
+    "location": "",
+    "meta": {}
+  }
+]
