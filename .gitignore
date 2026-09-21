@@ -80,3 +80,4 @@ benchmark/cpp_results.json
 benchmark/ts_timing.json
 benchmark/cpp_timing.json
 benchmark/parity_report.json
+docs/search-engine-experiment.md
