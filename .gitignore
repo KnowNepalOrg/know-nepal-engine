@@ -71,3 +71,12 @@ nul
 
 # generated output
 data/sample_output.json
+
+# benchmark outputs
+benchmark/dataset.json
+benchmark/processed.json
+benchmark/ts_results.json
+benchmark/cpp_results.json
+benchmark/ts_timing.json
+benchmark/cpp_timing.json
+benchmark/parity_report.json
