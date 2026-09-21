@@ -11,12 +11,20 @@ add_library(engine_lib STATIC
     src/normalize.cpp
     src/id_generator.cpp
     src/index_builder.cpp
+    src/levenshtein.cpp
+    src/search.cpp
 )
 target_include_directories(engine_lib PUBLIC include)
 target_link_libraries(engine_lib PUBLIC nlohmann_json::nlohmann_json)
 
 add_executable(index-builder src/main.cpp)
 target_link_libraries(index-builder PRIVATE engine_lib)
+
+add_executable(search-engine src/search_main.cpp)
+target_link_libraries(search-engine PRIVATE engine_lib)
+
+add_executable(bench-cpp benchmark/bench-cpp.cpp)
+target_link_libraries(bench-cpp PRIVATE engine_lib)
 
 enable_testing()
 add_subdirectory(tests)
