@@ -20,19 +20,26 @@ static std::u16string utf8_to_utf16(std::string_view utf8) {
         char32_t cp;
         int seq_len;
 
-        if (byte < 0x80) {
+        if (byte < 0x80)
+        {
             cp = byte;
             seq_len = 1;
-        } else if ((byte & 0xE0) == 0xC0) {
+        }
+        else if ((byte & 0xE0) == 0xC0)
+        {
             cp = byte & 0x1F;
             seq_len = 2;
-        } else if ((byte & 0xF0) == 0xE0) {
+        }
+        else if ((byte & 0xF0) == 0xE0)
+        {
             cp = byte & 0x0F;
             seq_len = 3;
-        } else if ((byte & 0xF8) == 0xF0) {
+        }
+        else if ((byte & 0xF8) == 0xF0) {
             cp = byte & 0x07;
             seq_len = 4;
-        } else {
+        }
+         else {
             i += 1;
             continue;
         }
@@ -67,7 +74,8 @@ static std::u16string utf8_to_utf16(std::string_view utf8) {
     return result;
 }
 
-int levenshtein(std::string_view a, std::string_view b) {
+int levenshtein(std::string_view a, std::string_view b)
+{
     auto a16 = utf8_to_utf16(a);
     auto b16 = utf8_to_utf16(b);
     size_t len_a = a16.size();
